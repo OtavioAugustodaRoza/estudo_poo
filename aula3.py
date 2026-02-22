@@ -57,8 +57,18 @@ class ContaBancaria:
             self.__saldo+=valor
             self.__transacoes.append(Transacao("deposito",valor,self.__saldo))
         else:
-            raise ValueError('valor invalido')    
-# vou arrumar dps pra salvar os dados
-
-
+            raise ValueError('valor invalido') 
         
+    def transferencia(self,valor,destino):
+        if self == destino:
+           raise ValueError('transacao invalida')
+    
+        self.sacar(valor)
+        destino.depositar(valor)    
+            
+
+
+otavio = ContaBancaria(100)
+neymar = ContaBancaria(20000)
+neymar.transferencia(2000,otavio)
+print(neymar.extrato)
