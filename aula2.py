@@ -1,3 +1,4 @@
+from random import randint
 class Pessoa:
     ano_atual = 2025
     def __init__(self,nome,idade):
@@ -15,6 +16,11 @@ class Pessoa:
     def por_ano_nascimento(cls,ano):
         return cls.ano_atual - ano
     
+
+    @staticmethod 
+    def gera_id(): # você pode usar o static quando voce vai fazer apenas uma func normal sem receber instancia nem classe 
+        return randint(1000,1999)
+
 
     
 
