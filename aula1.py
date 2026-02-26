@@ -47,7 +47,7 @@ class ContaBancaria:
     def transacoes(self):
         return self.__transacoes.copy()
     
-    @property  # vou farmar aura ja volto ai
+    @property  
     def saldo(self):
         return self.__saldo
     
