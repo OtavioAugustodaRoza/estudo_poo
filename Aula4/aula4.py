@@ -2,7 +2,7 @@ class CarinhoDeCompras:
     def __init__(self):
         self.__produtos = []
 
-    @property
+
     def lista_produtos(self):
         for produto in self.__produtos:
             print(produto.nome, produto.valor)
